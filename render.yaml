@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: goldstream-proxy
+    env: node
+    region: oregon
+    plan: free
+    buildCommand: npm install
+    startCommand: node index.js
+    envVars:
+      - key: PORT
+        value: 3000
